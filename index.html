@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyTogether | Virtual Study Groups</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo"><i class="fas fa-book-open"></i> StudyTogether</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#groups"><i class="fas fa-users"></i> Groups</a></li>
+          <li><a href="#notes"><i class="fas fa-notes"></i> Shared Notes</a></li>
+          <li><a href="#login" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Study Smarter, Together</h2>
+        <p>Join virtual study groups, share notes, and collaborate in real-time with students worldwide.</p>
+        <a href="#groups" class="btn-primary">Explore Groups</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/500x300" alt="Students studying together">
+      </div>
+    </div>
+  </section>
+
+  <!-- Study Groups Section -->
+  <section class="study-groups" id="groups">
+    <div class="container">
+      <h2 class="section-title">Available Study Groups</h2>
+      <div class="group-filters">
+        <input type="text" placeholder="Search groups..." class="search-input">
+        <select class="subject-filter">
+          <option value="">All Subjects</option>
+          <option value="math">Mathematics</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+          <option value="programming">Programming</option>
+        </select>
+      </div>
+      
+      <div class="groups-grid" id="groups-list">
+        <!-- Groups will be added here by JavaScript -->
+      </div>
+      
+      <button class="btn-secondary" id="load-more">Load More Groups</button>
+    </div>
+  </section>
+
+  <!-- Create Group Section -->
+  <section class="create-group">
+    <div class="container">
+      <h2 class="section-title">Create Your Own Study Group</h2>
+      <form id="group-form" class="group-form">
+        <div class="form-group">
+          <label for="group-name"><i class="fas fa-tag"></i> Group Name</label>
+          <input type="text" id="group-name" placeholder="e.g., Advanced Calculus Study" required>
+          <span class="error-message" id="name-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="group-subject"><i class="fas fa-graduation-cap"></i> Subject</label>
+          <select id="group-subject" required>
+            <option value="">Select a subject</option>
+            <option value="math">Mathematics</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="programming">Programming</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-message" id="subject-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="group-desc"><i class="fas fa-info-circle"></i> Description</label>
+          <textarea id="group-desc" placeholder="What will your group focus on?" required></textarea>
+          <span class="error-message" id="desc-error"></span>
+        </div>
+        
+        <button type="submit" class="btn-primary"><i class="fas fa-plus-circle"></i> Create Group</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Shared Notes Preview -->
+  <section class="shared-notes" id="notes">
+    <div class="container">
+      <h2 class="section-title">Shared Notes</h2>
+      <div class="notes-container">
+        <div class="note-editor">
+          <h3>Collaborative Notes</h3>
+          <textarea id="shared-note" placeholder="Start typing here... Everyone in your group will see these notes in real-time!"></textarea>
+          <div class="note-actions">
+            <button class="btn-small"><i class="fas fa-save"></i> Save</button>
+            <button class="btn-small"><i class="fas fa-share-alt"></i> Share</button>
+          </div>
+        </div>
+        <div class="note-preview">
+          <h3>Note Preview</h3>
+          <div class="note-content" id="note-preview">
+            Your notes will appear here...
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2023 StudyTogether. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
